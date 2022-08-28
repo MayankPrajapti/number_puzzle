@@ -4,7 +4,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MaterialApp(debugShowCheckedModeBanner: false, home: Puzzle()));
+  print("Shree Ganeshay Namah");
+  runApp(
+      MaterialApp(
+          debugShowCheckedModeBanner: false, home: Puzzle()));
 }
 
 class Puzzle extends StatefulWidget {
@@ -15,9 +18,10 @@ class Puzzle extends StatefulWidget {
 }
 
 class _PuzzleState extends State<Puzzle> {
-  int mayank=0;
+  int mayank = 0;
   String temp = "";
   String win = "";
+
   @override
   void initState() {
     // TODO: implement initState
@@ -26,151 +30,158 @@ class _PuzzleState extends State<Puzzle> {
   }
 
   void press(int index) {
-    setState(() {if(win!="Congratulation You Are Win..!!! 🎉") {
-      if (index == 4) {
-        if (btext[1] == "") {
-          temp = btext[1];
-          btext[1] = btext[4];
-          btext[4] = temp;
+    setState(() {
+      if (win != "Congratulation You Are Win..!!! 🎉") {
+        if (index == 4) {
+          if (btext[1] == "") {
+            temp = btext[1];
+            btext[1] = btext[4];
+            btext[4] = temp;
+          }
+          if (btext[7] == "") {
+            temp = btext[7];
+            btext[7] = btext[4];
+            btext[4] = temp;
+          }
+          if (btext[3] == "") {
+            temp = btext[3];
+            btext[3] = btext[4];
+            btext[4] = temp;
+          }
+          if (btext[5] == "") {
+            temp = btext[5];
+            btext[5] = btext[4];
+            btext[4] = temp;
+          }
         }
-        if (btext[7] == "") {
-          temp = btext[7];
-          btext[7] = btext[4];
-          btext[4] = temp;
+        if (index == 0) {
+          if (btext[1] == "") {
+            temp = btext[1];
+            btext[1] = btext[0];
+            btext[0] = temp;
+          }
+          if (btext[3] == "") {
+            temp = btext[3];
+            btext[3] = btext[0];
+            btext[0] = temp;
+          }
         }
-        if (btext[3] == "") {
-          temp = btext[3];
-          btext[3] = btext[4];
-          btext[4] = temp;
+        if (index == 1) {
+          if (btext[0] == "") {
+            temp = btext[0];
+            btext[0] = btext[1];
+            btext[1] = temp;
+          }
+          if (btext[2] == "") {
+            temp = btext[2];
+            btext[2] = btext[1];
+            btext[1] = temp;
+          }
+          if (btext[4] == "") {
+            temp = btext[4];
+            btext[4] = btext[1];
+            btext[1] = temp;
+          }
         }
-        if (btext[5] == "") {
-          temp = btext[5];
-          btext[5] = btext[4];
-          btext[4] = temp;
+        if (index == 2) {
+          if (btext[1] == "") {
+            temp = btext[1];
+            btext[1] = btext[2];
+            btext[2] = temp;
+          }
+          if (btext[5] == "") {
+            temp = btext[5];
+            btext[5] = btext[2];
+            btext[2] = temp;
+          }
+        }
+        if (index == 3) {
+          if (btext[0] == "") {
+            temp = btext[0];
+            btext[0] = btext[3];
+            btext[3] = temp;
+          }
+          if (btext[6] == "") {
+            temp = btext[6];
+            btext[6] = btext[3];
+            btext[3] = temp;
+          }
+          if (btext[4] == "") {
+            temp = btext[4];
+            btext[4] = btext[3];
+            btext[3] = temp;
+          }
+        }
+        if (index == 5) {
+          if (btext[2] == "") {
+            temp = btext[2];
+            btext[2] = btext[5];
+            btext[5] = temp;
+          }
+          if (btext[4] == "") {
+            temp = btext[4];
+            btext[4] = btext[5];
+            btext[5] = temp;
+          }
+          if (btext[8] == "") {
+            temp = btext[8];
+            btext[8] = btext[5];
+            btext[5] = temp;
+          }
+        }
+        if (index == 6) {
+          if (btext[3] == "") {
+            temp = btext[3];
+            btext[3] = btext[6];
+            btext[6] = temp;
+          }
+          if (btext[7] == "") {
+            temp = btext[7];
+            btext[7] = btext[6];
+            btext[6] = temp;
+          }
+        }
+        if (index == 7) {
+          if (btext[4] == "") {
+            temp = btext[4];
+            btext[4] = btext[7];
+            btext[7] = temp;
+          }
+          if (btext[6] == "") {
+            temp = btext[6];
+            btext[6] = btext[7];
+            btext[7] = temp;
+          }
+          if (btext[8] == "") {
+            temp = btext[8];
+            btext[8] = btext[7];
+            btext[7] = temp;
+          }
+        }
+        if (index == 8) {
+          if (btext[7] == "") {
+            temp = btext[7];
+            btext[7] = btext[8];
+            btext[8] = temp;
+          }
+          if (btext[5] == "") {
+            temp = btext[5];
+            btext[5] = btext[8];
+            btext[8] = temp;
+          }
+          if (btext[0] == "1" &&
+              btext[1] == "2" &&
+              btext[2] == "3" &&
+              btext[3] == "4" &&
+              btext[4] == "5" &&
+              btext[5] == "6" &&
+              btext[6] == "7" &&
+              btext[7] == "8" &&
+              btext[8] == "") {
+            win = "Congratulation You Are Win..!!! 🎉";
+          }
         }
       }
-      if (index == 0) {
-        if (btext[1] == "") {
-          temp = btext[1];
-          btext[1] = btext[0];
-          btext[0] = temp;
-        }
-        if (btext[3] == "") {
-          temp = btext[3];
-          btext[3] = btext[0];
-          btext[0] = temp;
-        }
-      }
-      if (index == 1) {
-        if (btext[0] == "") {
-          temp = btext[0];
-          btext[0] = btext[1];
-          btext[1] = temp;
-        }
-        if (btext[2] == "") {
-          temp = btext[2];
-          btext[2] = btext[1];
-          btext[1] = temp;
-        }
-        if (btext[4] == "") {
-          temp = btext[4];
-          btext[4] = btext[1];
-          btext[1] = temp;
-        }
-      }
-      if (index == 2) {
-        if (btext[1] == "") {
-          temp = btext[1];
-          btext[1] = btext[2];
-          btext[2] = temp;
-        }
-        if (btext[5] == "") {
-          temp = btext[5];
-          btext[5] = btext[2];
-          btext[2] = temp;
-        }
-      }
-      if (index == 3) {
-        if (btext[0] == "") {
-          temp = btext[0];
-          btext[0] = btext[3];
-          btext[3] = temp;
-        }
-        if (btext[6] == "") {
-          temp = btext[6];
-          btext[6] = btext[3];
-          btext[3] = temp;
-        }
-        if (btext[4] == "") {
-          temp = btext[4];
-          btext[4] = btext[3];
-          btext[3] = temp;
-        }
-      }
-      if (index == 5) {
-        if (btext[2] == "") {
-          temp = btext[2];
-          btext[2] = btext[5];
-          btext[5] = temp;
-        }
-        if (btext[4] == "") {
-          temp = btext[4];
-          btext[4] = btext[5];
-          btext[5] = temp;
-        }
-        if (btext[8] == "") {
-          temp = btext[8];
-          btext[8] = btext[5];
-          btext[5] = temp;
-        }
-      }
-      if (index == 6) {
-        if (btext[3] == "") {
-          temp = btext[3];
-          btext[3] = btext[6];
-          btext[6] = temp;
-        }
-        if (btext[7] == "") {
-          temp = btext[7];
-          btext[7] = btext[6];
-          btext[6] = temp;
-        }
-      }
-      if (index == 7) {
-        if (btext[4] == "") {
-          temp = btext[4];
-          btext[4] = btext[7];
-          btext[7] = temp;
-        }
-        if (btext[6] == "") {
-          temp = btext[6];
-          btext[6] = btext[7];
-          btext[7] = temp;
-        }
-        if (btext[8] == "") {
-          temp = btext[8];
-          btext[8] = btext[7];
-          btext[7] = temp;
-        }
-      }
-      if (index == 8) {
-        if (btext[7] == "") {
-          temp = btext[7];
-          btext[7] = btext[8];
-          btext[8] = temp;
-        }
-        if (btext[5] == "") {
-          temp = btext[5];
-          btext[5] = btext[8];
-          btext[8] = temp;
-        }
-        if (btext[0] == "1" && btext[1] == "2" && btext[2] == "3" &&
-            btext[3] == "4" && btext[4] == "5" && btext[5] == "6" &&
-            btext[6] == "7" && btext[7] == "8" && btext[8] == "") {
-          win = "Congratulation You Are Win..!!! 🎉";
-        }
-      }
-    }
     });
   }
 
@@ -180,7 +191,6 @@ class _PuzzleState extends State<Puzzle> {
     return InkWell(
       onTap: () {
         press(i);
-
       },
       child: Container(
         height: 150,
@@ -255,32 +265,46 @@ class _PuzzleState extends State<Puzzle> {
                       color: Colors.black,
                       child: Column(
                         children: [
-                          Expanded(flex: 1,
+                          Expanded(
+                            flex: 1,
                             child: Row(
                               children: [
                                 Expanded(
-                                  child: Container(alignment: Alignment.center,
+                                  child: Container(
+                                    alignment: Alignment.center,
                                     color: Colors.black,
-                                    child: Text('$win',style: TextStyle(color: Colors.white,fontSize: 22),),
+                                    child: Text(
+                                      '$win',
+                                      style: TextStyle(
+                                          color: Colors.white, fontSize: 22),
+                                    ),
                                   ),
                                 )
                               ],
                             ),
                           ),
-                          Expanded(flex: 3,
-                            child: Row(mainAxisAlignment: MainAxisAlignment.center,
-                              children: [ElevatedButton(onPressed: () {
-                                setState(() {
-                                  win="";
-                                  btext.shuffle();
-                                  // btext.toSet()=(Random().nextInt(9));
-                                  mayank=Random(1).nextInt(8);
-                                });
+                          Expanded(
+                            flex: 3,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                ElevatedButton(
+                                    onPressed: () {
+                                      setState(() {
+                                        win = "";
+                                        btext.shuffle();
+                                        // btext.toSet()=(Random().nextInt(9));
+                                        mayank = Random(1).nextInt(8);
+                                      });
 
-                                // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
-                                //   return Puzzle();
-                                // },));
-                              }, child: Text("Restart",style: TextStyle(fontSize: 20),))
+                                      // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
+                                      //   return Puzzle();
+                                      // },));
+                                    },
+                                    child: Text(
+                                      "Restart",
+                                      style: TextStyle(fontSize: 20),
+                                    ))
                               ],
                             ),
                           )
